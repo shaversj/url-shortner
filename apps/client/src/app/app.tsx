@@ -1,6 +1,10 @@
 import NxWelcome from './nx-welcome';
 import Logo from "./components/icons/Logo";
 import IllustrationWorking from "./components/icons/IllustrationWorking";
+import Facebook from "./components/icons/Facebook";
+import Twitter from "./components/icons/Twitter";
+import Pinterest from "./components/icons/Pinterest";
+import Instagram from "./components/icons/Instagram";
 
 export function App() {
   return (
@@ -55,10 +59,10 @@ export function App() {
       </div>
 
 
-      <div className={"h-[800px] bg-lightBlue px-[165px]"}>
-        <div className={"bg-lightBlue overflow-x-visible pt-[204px]"}>
-          <h2>Advanced Statistics</h2>
-          <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+      <div className={"h-[800px] bg-lightBlue px-[165px] flex justify-center"}>
+        <div className={"pt-[204px] w-[540px]"}>
+          <h2 className={"text-[40px] leading-[48px] font-bold tracking-[-1px] text-darkGray text-center"}>Advanced Statistics</h2>
+          <p className={"text-[18px] leading-8 tracking-[0.122727px] text-lightGray text-center pt-[18px]"}>Track how your links are performing across the web with our advanced statistics dashboard.</p>
           <div className={"h-[300px]"}>
 
           </div>
@@ -66,15 +70,59 @@ export function App() {
       </div>
 
 
-      <div>
+      <div className={""}>
         {/*  Brand Recognition */}
       </div>
 
-      <div>
-        <h3>Boost your links today</h3>
+      <div className={"bg-[url('/bg-boost-desktop.svg')] bg-darkPurple bg-no-repeat flex flex-col items-center gap-y-8 py-[57px]"}>
+        <h3 className={"text-[40px] font-bold leading-[48px] text-center tracking-[-1px] text-white"}>Boost your links today</h3>
+
+        <button className={"bg-aqua w-[197px] h-[56px] rounded-full text-[20px] text-white leading-[30px] font-bold"}>
+          Get Started
+        </button>
       </div>
 
-      <footer></footer>
+      <footer className={"bg-darkBrown px-[165px] py-[72px]"}>
+        <div className={"flex"}>
+          <Logo fill={'#FFFFFF'}/>
+          <div className={"pl-[261px] flex text-[#BFBFBF] font-medium text-[15px] leading-[22px] tracking-[-0.234375px] gap-x-24"}>
+
+            <div>
+              <h4 className={"font-bold leading-6 tracking-[0.25px] text-white"}>Features</h4>
+              <ul className={"pt-[22px] space-y-[10px]"}>
+                <li>Link Shortening</li>
+                <li>Branded Links</li>
+                <li>Analytics</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className={"font-bold leading-6 tracking-[0.25px] text-white"}>Resources</h4>
+              <ul className={"pt-[22px] space-y-[10px]"}>
+                <li>Blog</li>
+                <li>Developers</li>
+                <li>Support</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className={"font-bold leading-6 tracking-[0.25px] text-white"}>Company</h4>
+              <ul className={"pt-[22px] space-y-[10px]"}>
+                <li>About</li>
+                <li>Our Team</li>
+                <li>Careers</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div className={"flex gap-x-6 pl-[101px] h-6 items-center justify-center"}>
+            <Facebook />
+            <Twitter />
+            <Pinterest />
+            <Instagram />
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

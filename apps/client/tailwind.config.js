@@ -25,6 +25,7 @@ module.exports = {
         lightBlue: '#EFF1F7',
         gray: 'hsl(0, 0%, 75%)',
         red: 'hsl(0, 87%, 67%)',
+        darkBrown: '#232127',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
