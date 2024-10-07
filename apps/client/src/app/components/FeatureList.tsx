@@ -23,7 +23,7 @@ export default function FeatureList(){
   ]
 
   return (
-    <div className={"flex gap-x-[1.875rem] h-[24.938rem] pt-[6.25rem]"}>
+    <div className={"flex flex-col gap-y-[5.75rem] lg:flex-row gap-x-[1.875rem] h-[24.938rem] pt-[6.25rem]"}>
       {features.map((feature, index) => {
         return (
           <Feature key={index} title={feature.title} description={feature.description} icon={feature.icon}/>
