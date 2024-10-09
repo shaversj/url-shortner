@@ -12,16 +12,18 @@ const FormSchema = z.object({
   url: z.string().url(),
 });
 
-export default function ShortenLinkForm(){
+export default function ShortenLinkForm({addUrl}: {addUrl: (url: any) => void}) {
   const { register, handleSubmit, formState: { errors },} = useForm<FormValues>({resolver: zodResolver(FormSchema),});
   const [shortenedUrl, setShortenedUrl] = useState<string | null>(null);
 
   const onSubmit: SubmitHandler<FormValues> = async (data, e: any) => {
+    console.log("FORM DATA: ", data, e);
     try {
       const response = await axios.post('http://localhost:3333/shorten', {
         originalUrl: data.url,
       });
-      setShortenedUrl(response.data.shortUrl);
+      console.log('Shortened URL:', response.data);
+      addUrl(response.data);
     } catch (error) {
       console.error('Error shortening URL:', error);
     }
@@ -42,9 +44,6 @@ export default function ShortenLinkForm(){
           className={"rounded-lg w-full bg-aqua h-16 lg:w-[10.5rem] text-[1.25rem] text-white leading-[1.875rem] font-bold"}>Shorten
           It!
         </button>
-        <div>
-          {shortenedUrl && <p>{shortenedUrl}</p>}
-        </div>
       </form>
     </>
 

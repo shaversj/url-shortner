@@ -21,7 +21,7 @@ app.get('/api', (req, res) => {
 app.post('/shorten', async (req, res) => {
   const { originalUrl } = req.body;
   const shortUrl = nanoid(8);
-  const newUrl = { originalURL: originalUrl, shorURL: shortUrl };
+  const newUrl = { originalURL: originalUrl, shortURL: shortUrl };
   res.json(newUrl);
 });
 

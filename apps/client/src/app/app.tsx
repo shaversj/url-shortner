@@ -8,16 +8,32 @@ import ShortenLinkForm from "./components/ShortenLinkForm";
 import MainSection from "./components/MainSection";
 import Footer from "./components/Footer";
 import BoostSection from "./components/BoostSection";
+import {useState} from "react";
+import UrlCardList from "./UrlCardList";
+import UrlSection from "./components/UrlSection";
+
+type UrlObject = {
+  originalUrl: string;
+  shortUrl: string;
+}
 
 export function App() {
+  const [urls, setUrls] = useState<UrlObject[]>([]);
+  const addUrl = (url: UrlObject) => setUrls([...urls, url]);
+
   return (
     <div className={"font-poppins"}>
       {/*<NxWelcome title="client" />*/}
       <MainSection>
         <Header />
         <HeroSection />
-        <ShortenLinkForm />
+        <ShortenLinkForm addUrl={addUrl} />
       </MainSection>
+      {urls.length > 0 && (
+        <UrlSection>
+          <UrlCardList urls={urls}/>
+        </UrlSection>
+      )}
       <StatisticsSection>
         <StatisticsHeader/>
         <FeatureList/>
