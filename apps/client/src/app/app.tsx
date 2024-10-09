@@ -34,7 +34,7 @@ export function App() {
           <UrlCardList urls={urls}/>
         </UrlSection>
       )}
-      <StatisticsSection>
+      <StatisticsSection urls={urls}>
         <StatisticsHeader/>
         <FeatureList/>
       </StatisticsSection>
