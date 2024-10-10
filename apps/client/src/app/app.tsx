@@ -12,7 +12,7 @@ import {useState} from "react";
 import UrlCardList from "./UrlCardList";
 import UrlSection from "./components/UrlSection";
 
-type UrlObject = {
+export type UrlObject = {
   originalUrl: string;
   shortUrl: string;
 }
