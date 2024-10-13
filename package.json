@@ -2,7 +2,10 @@
   "name": "@url-shortner/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build:api": "npm i && nx run api:build:production",
+    "build:client": "npm i && nx run client:build:production",
+  },
   "private": true,
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
