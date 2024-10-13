@@ -1,5 +1,5 @@
 [build]
-publish = "/apps/api"
+publish = "dist/apps/api"
 
 [functions]
 directory = "netlify/functions"
