@@ -13,7 +13,7 @@ app.get('/.netlify/functions/api', (req, res) => {
   res.json({ message: 'Welcome to api!' });
 });
 
-app.use('/.netlify/functions/api', router);
+// app.use('/.netlify/functions/api', router);
 
 export const handler = serverless(app);
 
