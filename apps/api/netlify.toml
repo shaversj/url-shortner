@@ -1,3 +1,4 @@
-[functions]
-external_node_modules = ["express"]
-node_bundler = "esbuild"
+[build]
+  functions = "src"
+  node_bundler = "esbuild"
+  external_node_modules = ["express"]
