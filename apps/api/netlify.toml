@@ -1,2 +1,3 @@
-[build]
+[functions]
+  directory = "/apps/api/src"
   node_bundler = "esbuild"
