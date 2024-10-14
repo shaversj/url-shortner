@@ -21,7 +21,7 @@ export default function ShortenLinkForm({ addUrl }: { addUrl: (url: any) => void
   const onSubmit: SubmitHandler<FormValues> = async (data, e: any) => {
     console.log('FORM DATA: ', data, e);
     try {
-      const response = await axios.post('http://localhost:3333/shorten', {
+      const response = await axios.post('https://fascinating-moxie-add23d.netlify.app/.netlify/functions/api/shorten', {
         originalUrl: data.url,
       });
       console.log('Shortened URL:', response.data);
