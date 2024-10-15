@@ -57,7 +57,10 @@ export default function ShortenLinkForm({ addUrl }: { addUrl: (url: any) => void
           </span>
         )}
 
-        <button type={'submit'} className={`bg-aqua h-16 w-full rounded-lg text-[1.25rem] font-bold leading-[1.875rem] text-white md:w-[10.5rem] ${errors.url ? 'mt-[1.125rem] md:mt-0' : ''}`}>
+        <button
+          type={'submit'}
+          className={`bg-aqua h-16 w-full rounded-lg text-[1.25rem] font-bold leading-[1.875rem] text-white hover:bg-[#9AE3E3] md:w-[10.5rem] ${errors.url ? 'mt-[1.125rem] md:mt-0' : ''}`}
+        >
           Shorten It!
         </button>
       </form>

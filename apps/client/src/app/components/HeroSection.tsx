@@ -15,7 +15,7 @@ export default function HeroSection() {
         >
           Build your brand's recognition and get detailed insights on how your links are performing.
         </p>
-        <button className={'bg-aqua mt-[2.375rem] h-[3.5rem] w-[12.313rem] rounded-full text-[1.25rem] font-bold leading-[1.875rem] text-white'}>Get Started</button>
+        <button className={'bg-aqua mt-[2.375rem] h-[3.5rem] w-[12.313rem] rounded-full text-[1.25rem] font-bold leading-[1.875rem] text-white hover:bg-[#9AE3E3]'}>Get Started</button>
       </div>
 
       <div className={'row-start-1 overflow-visible lg:row-start-auto'}>

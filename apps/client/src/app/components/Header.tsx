@@ -44,21 +44,31 @@ export default function Header() {
 
         <ul className={'hidden lg:flex lg:gap-x-8 lg:pl-[2.839rem]'}>
           <li>
-            <a href="#">Features</a>
+            <a className={'hover:text-darkGray'} href="#">
+              Features
+            </a>
           </li>
           <li>
-            <a href="#">Pricing</a>
+            <a className={'hover:text-darkGray'} href="#">
+              Pricing
+            </a>
           </li>
           <li>
-            <a href="#">Resources</a>
+            <a className={'hover:text-darkGray'} href="#">
+              Resources
+            </a>
           </li>
         </ul>
-        <ul className={'hidden lg:ml-auto lg:flex lg:gap-x-[2.313rem]'}>
+        <ul className={'hidden items-center lg:ml-auto lg:flex lg:gap-x-[2.313rem]'}>
           <li>
-            <a href="#">Login</a>
+            <a className={'hover:text-darkGray'} href="#">
+              Login
+            </a>
           </li>
-          <li>
-            <a href="#">Sign Up</a>
+          <li className={'bg-aqua flex h-10 w-[105px] items-center justify-center rounded-full text-white hover:bg-[#9AE3E3]'}>
+            <a className={''} href="#">
+              Sign Up
+            </a>
           </li>
         </ul>
       </nav>

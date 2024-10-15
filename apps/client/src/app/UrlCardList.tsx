@@ -1,16 +1,17 @@
-export default function UrlCardList({urls}: {urls: any}) {
+export default function UrlCardList({ urls }: { urls: any }) {
   return (
-    <div className={"space-y-4"}>
-      {urls && urls.map((url: any, index: number) => (
-        <div key={index} className={"px-4 lg:px-8 py-4 bg-white flex-col flex md:flex-row rounded-md"}>
-          <p className={"text-darkGray md:text-[20px] leading-[36px] tracking-[0.12px] md:tracking-[0.15px] font-medium"}>{url.originalURL}</p>
-          <div className={"min-w-fit h-[1px] bg-[#e7e6e9] -mx-8 my-[6px] md:hidden"}></div>
-          <div className={"md:ml-auto flex flex-col gap-x-6 md:flex-row md:items-center"}>
-            <a className={"text-aqua md:text-[20px] leading-[36px] tracking-[0.12px] md:tracking-[0.15px] font-medium"}>https://rel.ink/{url.shortURL}</a>
-            <button className={"bg-aqua mt-2 w-full md:w-[103px] h-[40px] md:text-[15px] font-bold text-white rounded-lg md:mt-0"}>Copy</button>
+    <div className={'space-y-4'}>
+      {urls &&
+        urls.map((url: any, index: number) => (
+          <div key={index} className={'flex flex-col rounded-md bg-white px-4 py-4 md:flex-row lg:px-8'}>
+            <p className={'text-darkGray font-medium leading-[36px] tracking-[0.12px] md:text-[20px] md:tracking-[0.15px]'}>{url.originalURL}</p>
+            <div className={'-mx-8 my-[6px] h-[1px] min-w-fit bg-[#e7e6e9] md:hidden'}></div>
+            <div className={'flex flex-col gap-x-6 md:ml-auto md:flex-row md:items-center'}>
+              <a className={'text-aqua font-medium leading-[36px] tracking-[0.12px] md:text-[20px] md:tracking-[0.15px]'}>https://rel.ink/{url.shortURL}</a>
+              <button className={'bg-aqua mt-2 h-[40px] w-full rounded-lg font-bold text-white hover:bg-[#9AE3E3] md:mt-0 md:w-[103px] md:text-[15px]'}>Copy</button>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
     </div>
   );
 }
