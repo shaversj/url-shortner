@@ -1,4 +1,3 @@
-import NxWelcome from './nx-welcome';
 import FeatureList from './components/FeatureList';
 import StatisticsHeader from './components/StatisticsHeader';
 import StatisticsSection from './components/StatisticsSection';
@@ -11,11 +10,7 @@ import BoostSection from './components/BoostSection';
 import { useEffect, useState } from 'react';
 import UrlCardList from './components/UrlCardList';
 import UrlSection from './components/UrlSection';
-
-export type UrlObject = {
-  originalUrl: string;
-  shortUrl: string;
-};
+import { UrlObject } from './types/types';
 
 export function App() {
   const [urls, setUrls] = useState<UrlObject[]>([]);
@@ -34,7 +29,6 @@ export function App() {
 
   return (
     <div className={'font-poppins'}>
-      {/*<NxWelcome title="client" />*/}
       <MainSection>
         <Header />
         <HeroSection />
