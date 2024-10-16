@@ -9,7 +9,7 @@ import MainSection from './components/MainSection';
 import Footer from './components/Footer';
 import BoostSection from './components/BoostSection';
 import { useEffect, useState } from 'react';
-import UrlCardList from './UrlCardList';
+import UrlCardList from './components/UrlCardList';
 import UrlSection from './components/UrlSection';
 
 export type UrlObject = {

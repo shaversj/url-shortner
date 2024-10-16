@@ -11,7 +11,7 @@ app.use(cors());
 app.post('/.netlify/functions/api/shorten', async (req, res) => {
   const { originalUrl } = req.body;
   const shortUrl = nanoid(8);
-  const newUrl = { originalURL: originalUrl, shortURL: shortUrl };
+  const newUrl = { originalUrl: originalUrl, shortUrl: shortUrl };
   res.json(newUrl);
 });
 
