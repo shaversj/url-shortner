@@ -23,10 +23,13 @@ export default function FeatureList() {
   ];
 
   return (
-    <div className={'flex h-[24.938rem] flex-col items-center gap-x-[1.875rem] gap-y-[5.75rem] pt-[6.25rem] lg:flex-row'}>
-      {features.map((feature, index) => {
-        return <Feature key={index} title={feature.title} description={feature.description} icon={feature.icon} />;
-      })}
-    </div>
+    <>
+      <div className={'relative z-10 flex h-[24.938rem] flex-col items-center gap-x-[1.875rem] gap-y-[5.75rem] pt-[6.25rem] lg:w-full lg:flex-row'}>
+        {features.map((feature, index) => {
+          return <Feature key={index} title={feature.title} description={feature.description} icon={feature.icon} />;
+        })}
+      </div>
+      <div className={'bg-aqua relative bottom-64 mx-auto h-[50rem] w-2 lg:bottom-32 lg:mx-0 lg:h-2 lg:w-full lg:px-[10.313rem]'}></div>
+    </>
   );
 }
