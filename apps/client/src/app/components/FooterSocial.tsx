@@ -13,7 +13,7 @@ export default function FooterSocial() {
   ];
 
   return (
-    <div className={'flex h-6 items-center justify-center gap-x-6 border border-amber-200 pt-[3rem] lg:ml-auto lg:pt-0'}>
+    <div className={'flex h-6 items-center justify-center gap-x-6 pt-[3rem] lg:ml-auto lg:pt-0'}>
       {socialMediaLinks.map(({ name, icon }) => (
         <Fragment key={name}>{icon}</Fragment>
       ))}
