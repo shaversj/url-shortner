@@ -4,7 +4,7 @@ import StatisticsSection from './components/StatisticsSection';
 import HeroSection from './components/HeroSection';
 import Header from './components/Header';
 import ShortenLinkForm from './components/ShortenLinkForm';
-import MainSection from './components/MainSection';
+import HeroContainer from './components/HeroContainer';
 import Footer from './components/Footer';
 import BoostSection from './components/BoostSection';
 import { useEffect, useState } from 'react';
@@ -28,12 +28,12 @@ export function App() {
   }, []);
 
   return (
-    <main className={'font-poppins'}>
-      <MainSection>
+    <main>
+      <HeroContainer>
         <Header />
         <HeroSection />
         <ShortenLinkForm addUrl={addUrl} />
-      </MainSection>
+      </HeroContainer>
       {urls.length > 0 && (
         <UrlSection>
           <UrlCardList urls={urls} />

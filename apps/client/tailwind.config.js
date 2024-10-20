@@ -3,13 +3,7 @@ const { join } = require('path');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    join(
-      __dirname,
-      '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'
-    ),
-    ...createGlobPatternsForDependencies(__dirname),
-  ],
+  content: [join(__dirname, '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'), ...createGlobPatternsForDependencies(__dirname)],
   theme: {
     extend: {
       screens: {
@@ -28,10 +22,9 @@ module.exports = {
         darkBrown: '#232127',
       },
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
+        sans: ['Poppins', 'sans-serif'],
       },
     },
   },
-  plugins: [
-  ],
+  plugins: [],
 };
