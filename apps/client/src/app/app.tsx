@@ -28,7 +28,7 @@ export function App() {
   }, []);
 
   return (
-    <div className={'font-poppins'}>
+    <main className={'font-poppins'}>
       <MainSection>
         <Header />
         <HeroSection />
@@ -45,7 +45,7 @@ export function App() {
       </StatisticsSection>
       <BoostSection />
       <Footer />
-    </div>
+    </main>
   );
 }
 
