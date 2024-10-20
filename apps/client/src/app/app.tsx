@@ -28,7 +28,7 @@ export function App() {
   }, []);
 
   return (
-    <main className={'lg:min-h-[64rem]'}>
+    <main>
       <HeroContainer>
         <Header />
         <HeroSection />
