@@ -28,7 +28,7 @@ export function App() {
   }, []);
 
   return (
-    <main>
+    <main className={'lg:h-full'}>
       <HeroContainer>
         <Header />
         <HeroSection />
